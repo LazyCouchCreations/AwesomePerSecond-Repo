@@ -1,8 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Grenade : MonoBehaviour {
+
+	private AudioSource source;
+	public AudioClip explosionAudioClip;
 
 	public float delay;
 	public float radius;
@@ -15,6 +16,7 @@ public class Grenade : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		remainingDelay = delay;
+		source = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -31,6 +33,7 @@ public class Grenade : MonoBehaviour {
 	{
 		//instantiate an explosion effect
 		Instantiate(effect, transform.position, transform.rotation);
+		source.PlayOneShot(explosionAudioClip);
 
 		//get all valid colliders
 		Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, radius, explodable);
@@ -60,7 +63,13 @@ public class Grenade : MonoBehaviour {
 	{
 		Rigidbody2D rb = GetComponent<Rigidbody2D>();
 		rb.velocity = transform.right * throwForce;
+	}
 
-
+	private void OnCollisionEnter2D(Collision2D collision)
+	{
+		if(collision.transform.tag == "Enemy")
+		{
+			Explode();
+		}
 	}
 }

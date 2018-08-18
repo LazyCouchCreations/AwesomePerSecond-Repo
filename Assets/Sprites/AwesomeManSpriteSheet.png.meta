@@ -1,0 +1,299 @@
+fileFormatVersion: 2
+guid: a6193380a8fe266469b483c64ac5ba87
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: AwesomeManSpriteSheet_0
+    21300002: AwesomeManSpriteSheet_1
+    21300004: AwesomeManSpriteSheet_2
+    21300006: AwesomeManSpriteSheet_3
+    21300008: AwesomeManSpriteSheet_4
+    21300010: AwesomeManSpriteSheet_5
+    21300012: AwesomeManSpriteSheet_6
+    21300014: AwesomeManSpriteSheet_7
+    21300016: AwesomeManSpriteSheet_8
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 12
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: AwesomeManSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 53
+        width: 64
+        height: 47
+      alignment: 9
+      pivot: {x: 0.8297919, y: 0.78203005}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd8dbbf3f0ad91a4cafe6976bd2ac730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AwesomeManSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 83
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8af2e03448a08cd41856793e9528b97e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AwesomeManSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 37
+        width: 50
+        height: 47
+      alignment: 9
+      pivot: {x: 0.56811404, y: 0.050738316}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 436de68826d8b7c40a5bef362951c9c0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AwesomeManSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 76
+        width: 21
+        height: 26
+      alignment: 9
+      pivot: {x: 0.51399887, y: 0.17204167}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5dfdafb75c4c1a4ea3d60cc882a9262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AwesomeManSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 49
+        width: 21
+        height: 29
+      alignment: 9
+      pivot: {x: 0.7539354, y: 0.7548274}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04338a3f31b8c9d479d16096ff4339ba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AwesomeManSpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 23
+        width: 21
+        height: 32
+      alignment: 9
+      pivot: {x: 0.41599092, y: 0.8491621}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7f6db6407623a547b4d12cab18ee92b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AwesomeManSpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 49
+        width: 21
+        height: 33
+      alignment: 9
+      pivot: {x: 0.34597924, y: 0.70493084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fdf20edf2259d84c9dfde7bf4fe0da0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AwesomeManSpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 27
+        width: 17
+        height: 33
+      alignment: 9
+      pivot: {x: 0.44810936, y: 0.8742217}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8280e6949e43a5a45b9dbee29907c2db
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AwesomeManSpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 6
+        width: 40
+        height: 34
+      alignment: 9
+      pivot: {x: 0.5, y: 0.10684521}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e819d1421cf686145940d71cacbffc43
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 524f9c9a2799dad4188e490cf2eec45c
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

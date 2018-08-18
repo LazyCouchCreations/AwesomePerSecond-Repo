@@ -1,10 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour {
 
+	private AudioSource audioSource;
+
 	public GameObject grenadePrefab;
+	public AudioClip throwReleaseAudioClip;
 	
 	public float maxThrowTimer;
 	public float minThrowTimer;
@@ -15,7 +16,7 @@ public class PlayerAttack : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		audioSource = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -42,7 +43,7 @@ public class PlayerAttack : MonoBehaviour {
 			}
 
 			throwForce = throwForceBase * throwTimer;
-			Debug.Log(throwForce.ToString());
+			//Debug.Log(throwForce.ToString());
 			Throw();
 		}
 	}
@@ -51,6 +52,7 @@ public class PlayerAttack : MonoBehaviour {
 	{
 		GameObject grenade = Instantiate(grenadePrefab, grenadeSpawn.position, grenadeSpawn.rotation);
 		grenade.GetComponent<Grenade>().Throw(throwForce);
+		audioSource.PlayOneShot(throwReleaseAudioClip);
 	}
 
 
