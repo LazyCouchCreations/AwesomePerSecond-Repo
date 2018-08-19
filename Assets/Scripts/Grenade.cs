@@ -10,8 +10,13 @@ public class Grenade : MonoBehaviour {
 	private float remainingDelay;
 	private bool isExploded = false;
 	public float explosionForce;
+	public int explosionDamage;
 	public GameObject effect;
 	public LayerMask explodable;
+
+	//camera shake
+	public float cameraShakeDuration;
+	public float cameraShakeMagnitude;
 
 	// Use this for initialization
 	void Start () {
@@ -52,8 +57,16 @@ public class Grenade : MonoBehaviour {
 				}
 
 				rb.AddForce(direction.normalized * explosionForce * calc);
+
+				if (collider.tag == "Enemy")
+				{
+					collider.gameObject.GetComponent<Health>().takeDamage(Mathf.RoundToInt(explosionDamage * calc));
+				}				
 			}
 		}
+
+		//shake the camera
+		Camera.main.GetComponent<CameraShake>().StartCoroutine(Camera.main.GetComponent<CameraShake>().Shake(cameraShakeDuration, cameraShakeMagnitude));
 
 		//destroy the grenade
 		Destroy(gameObject);

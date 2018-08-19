@@ -4,6 +4,11 @@ public class PlayerMovement : MonoBehaviour {
 
 	private Rigidbody2D rb;
 	private AudioSource audioSource;
+	private Animator anim;
+
+	//facing
+	private Vector2 worldMousePos;
+	private Vector2 myFlatTransform;
 
 	//walking
 	private float moveInput;
@@ -24,23 +29,15 @@ public class PlayerMovement : MonoBehaviour {
 	void Start () {
 		rb = GetComponent<Rigidbody2D>();
 		audioSource = GetComponent<AudioSource>();
+		anim = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		moveInput = Input.GetAxis("Horizontal");
+		worldMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+		myFlatTransform = new Vector2(transform.position.x, transform.position.y);
 
-		if (moveInput == 0)
-		{
-			//stop walking animation
-			//animator.SetBool("isWalking", false);
-		}
-		else
-		{
-			//start walk animation
-			//animator.SetBool("isWalking", true);
-			//animator.SetFloat("walkSpeed", moveInput);
-		}
+		moveInput = Input.GetAxis("Horizontal");
 
 		if (Input.GetButtonDown("Jump") && isGrounded)
 		{
@@ -50,8 +47,21 @@ public class PlayerMovement : MonoBehaviour {
 
 	private void FixedUpdate()
 	{
+		if (worldMousePos.x > myFlatTransform.x)
+		{
+			//look right
+			transform.localScale = new Vector3(1.5f, 1.5f, 1);
+		}
+		else if (worldMousePos.x < myFlatTransform.x)
+		{
+			//look left
+			transform.localScale = new Vector3(-1.5f, 1.5f, 1);
+		}
+
 		Debug.DrawRay(feetPos.position, feetPos.right * whiskerLength, Color.magenta);
-		isGrounded = Physics2D.Raycast(feetPos.position, feetPos.right, whiskerLength, whatIsGround);
+		isGrounded = Physics2D.OverlapCircle(feetPos.position, whiskerLength, whatIsGround);
+		anim.SetBool("isGrounded", isGrounded);
+
 		if (isGrounded && !landed)
 		{
 			landed = true;
@@ -64,6 +74,7 @@ public class PlayerMovement : MonoBehaviour {
 		}
 
 		rb.velocity = new Vector2(moveInput * walkSpeed, rb.velocity.y);
+		anim.SetFloat("Speed", Mathf.Abs(moveInput));
 
 		if (isJumping)
 		{
@@ -72,5 +83,7 @@ public class PlayerMovement : MonoBehaviour {
 			isJumping = false;
 			audioSource.PlayOneShot(jumpAudioClip);
 		}
+
+		anim.SetFloat("vSpeed", rb.velocity.y);
 	}
 }

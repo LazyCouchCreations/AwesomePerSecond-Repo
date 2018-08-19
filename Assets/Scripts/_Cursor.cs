@@ -2,10 +2,14 @@
 
 public class _Cursor : MonoBehaviour {
 
-	public Texture2D cursorTexture;
-
-	// Use this for initialization
-	void Start () {
-		Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
+	private Vector2 worldMousePos;
+	
+	private void Update()
+	{
+		Cursor.visible = false;
+		worldMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+		transform.position = new Vector3(worldMousePos.x, worldMousePos.y);
 	}
+
+
 }

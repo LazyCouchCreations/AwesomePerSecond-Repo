@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Audio
   - Enemy
+  - Target
+  - Orb
+  - OrbEater
+  - Cursor
   layers:
   - Default
   - TransparentFX

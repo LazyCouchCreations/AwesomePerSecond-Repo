@@ -4,6 +4,8 @@ public class PlayerAttack : MonoBehaviour {
 
 	private AudioSource audioSource;
 
+	private Animator cursorAnim;
+
 	public GameObject grenadePrefab;
 	public AudioClip throwReleaseAudioClip;
 	
@@ -17,10 +19,12 @@ public class PlayerAttack : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		audioSource = GetComponent<AudioSource>();
+		cursorAnim = GameObject.FindGameObjectWithTag("Cursor").GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		cursorAnim.SetFloat("Charge", throwTimer);
 		if (Input.GetButtonDown("Fire1"))
 		{
 			throwTimer = 0;
@@ -43,7 +47,6 @@ public class PlayerAttack : MonoBehaviour {
 			}
 
 			throwForce = throwForceBase * throwTimer;
-			//Debug.Log(throwForce.ToString());
 			Throw();
 		}
 	}
@@ -53,6 +56,7 @@ public class PlayerAttack : MonoBehaviour {
 		GameObject grenade = Instantiate(grenadePrefab, grenadeSpawn.position, grenadeSpawn.rotation);
 		grenade.GetComponent<Grenade>().Throw(throwForce);
 		audioSource.PlayOneShot(throwReleaseAudioClip);
+		throwTimer = 0;
 	}
 
 
